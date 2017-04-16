@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.qqFace{margin-top:0px;/*background:#fff;padding:0.89em;*/ width:92%; padding:0 4%; background:#f7f7f8;}
+.qqFace table tr { height:1.2em; line-height:1.2em;}
+.qqFace table td{padding:0.5em;}
+.qqFace table td img{cursor:pointer;border:none;}
+.qqFace table td img:hover{border:none;}
+
+
+
+/* Swipe 2 required styles */
+
+.swipe {
+  overflow: hidden;
+/*  visibility: hidden;*/
+  position: relative; margin:0 auto; z-index:10000000;
+}
+.swipe-wrap {
+/*  overflow: hidden;*/
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+.emotion_tb { width:100%; background:#f7f7f8;  margin:0 auto;}
+.emotion_tb td{
+	width:30px;
+	height:30px;
+	line-height:30px;
+}
+.buttttt { position:relative; left:40%; background:#f7f7f8;}
+button {  border-radius:50%;; background:#E7E7E7; outline:0; width:0.7em; height:0.7em; border-style:#e7e7e7 dotted; border-color: transparent; 	}
+button:hover { border-radius:50%; background:#ccc;outline:0; width:0.7em; height:0.7em; border-style:#e7e7e7 dotted; border-color: transparent;	}
+
+/* END required styles */
