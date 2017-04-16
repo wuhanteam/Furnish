@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- 默认的配置信息 -->
+	<default-config>
+		<property name="jdbcUrl">jdbc:oracle:thin:@127.0.0.1:1521:orcl</property>
+		<property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+		<property name="user">hero_indiana</property>
+		<property name="password">hero_indiana</property>
+		<property name="initialPoolSize">3</property>
+		<property name="maxPoolSize">10</property>
+		<property name="maxIdleTime">3000</property>
+	</default-config>
+</c3p0-config>
