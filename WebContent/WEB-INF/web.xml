@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Furnish</display-name>
-<welcome-file-list>
-	<welcome-file>/index_user.jsp</welcome-file>
-</welcome-file-list>
+  <welcome-file-list>
+    <welcome-file>/index_user.jsp</welcome-file>
+  </welcome-file-list>
   <jsp-config>
     <taglib>
       <taglib-uri>/WEB-INF/softeem-view.tld</taglib-uri>
@@ -41,12 +41,10 @@
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
-  
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
-  
   <filter>
     <filter-name>shiroFilter</filter-name>
     <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -54,10 +52,10 @@
       <param-name>targetFilterLifecycle</param-name>
       <param-value>true</param-value>
     </init-param>
-     <init-param> 
-       <param-name>targetBeanName</param-name> 
-       <param-value>shiroFilter</param-value> 
-     </init-param> 
+    <init-param>
+      <param-name>targetBeanName</param-name>
+      <param-value>shiroFilter</param-value>
+    </init-param>
   </filter>
   <filter-mapping>
     <filter-name>shiroFilter</filter-name>
@@ -302,7 +300,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>AppLoginServlet</servlet-name>
-    <url-pattern>/login/AppLoginServlet.action</url-pattern>
+    <url-pattern>/App/AppLoginServlet.action</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -312,7 +310,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>QueryAppIndexServlet</servlet-name>
-    <url-pattern>/services/QueryAppIndexServlet.action</url-pattern>
+    <url-pattern>/App/QueryAppIndexServlet.action</url-pattern>
   </servlet-mapping>
   <servlet>
     <description>IndexServlet</description>
@@ -324,8 +322,7 @@
     <servlet-name>IndexServlet</servlet-name>
     <url-pattern>/IndexServlet.action</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <description>FindUserPassServlet</description>
     <display-name>FindUserPassServlet</display-name>
     <servlet-name>FindUserPassServlet</servlet-name>
@@ -335,7 +332,6 @@
     <servlet-name>FindUserPassServlet</servlet-name>
     <url-pattern>/FindUserPass.action</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description>FindUserPassCheckLinkServlet</description>
     <display-name>FindUserPassCheckLinkServlet</display-name>
@@ -346,8 +342,7 @@
     <servlet-name>FindUserPassCheckLinkServlet</servlet-name>
     <url-pattern>/checkLink.action</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <description>QueryYiyuanInfoServlet</description>
     <display-name>QueryYiyuanInfoServlet</display-name>
     <servlet-name>QueryYiyuanInfoServlet</servlet-name>
@@ -357,7 +352,7 @@
     <servlet-name>QueryYiyuanInfoServlet</servlet-name>
     <url-pattern>/services/QueryYiyuanInfoServlet.action</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <description>MofifyYiyuanInfoServlet</description>
     <display-name>MofifyYiyuanInfoServlet</display-name>
     <servlet-name>MofifyYiyuanInfoServlet</servlet-name>
@@ -366,5 +361,35 @@
   <servlet-mapping>
     <servlet-name>MofifyYiyuanInfoServlet</servlet-name>
     <url-pattern>/services/MofifyYiyuanInfoServlet.action</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QueryAppZJInfoServlet</display-name>
+    <servlet-name>QueryAppZJInfoServlet</servlet-name>
+    <servlet-class>com.softeem.servlet.QueryAppZJInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryAppZJInfoServlet</servlet-name>
+    <url-pattern>/app/QueryAppZJInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QueryAppYiYuanInfoServlet</display-name>
+    <servlet-name>QueryAppYiYuanInfoServlet</servlet-name>
+    <servlet-class>com.softeem.servlet.QueryAppYiYuanInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryAppYiYuanInfoServlet</servlet-name>
+    <url-pattern>/app/QueryAppYiYuanInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QueryAppZJInfoByUserServlet</display-name>
+    <servlet-name>QueryAppZJInfoByUserServlet</servlet-name>
+    <servlet-class>com.softeem.servlet.QueryAppZJInfoByUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryAppZJInfoByUserServlet</servlet-name>
+    <url-pattern>/App/QueryAppZJInfoByUserServlet</url-pattern>
   </servlet-mapping>
 </web-app>

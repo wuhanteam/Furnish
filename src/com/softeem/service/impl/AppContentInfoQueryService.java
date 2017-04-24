@@ -8,7 +8,6 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.softeem.dao.IAppContentInfoQueryDao;
-import com.softeem.dao.impl.AppContentInfoQueryDaoImpl;
 import com.softeem.service.IAppContentInfoQueryService;
 
 @Service("appContentInfoQueryService")

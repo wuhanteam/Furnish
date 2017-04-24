@@ -10,7 +10,6 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Service;
@@ -18,7 +17,6 @@ import org.springframework.stereotype.Service;
 import com.softeem.bean.YiYuanInfoBean;
 import com.softeem.dao.IJdbcDAO;
 import com.softeem.dao.IYiYuanInfoDao;
-import com.softeem.dao.impl.YiYuanInfoDao;
 import com.softeem.service.IYiYuanInfoService;
 import com.softeem.utils.VOResult;
 

@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 import com.softeem.bean.CustomerInfoBean;
 import com.softeem.dao.ICustomerInfoDao;
 import com.softeem.dao.IJdbcDAO;
-import com.softeem.dao.impl.CustomerInfoDaoImpl;
 import com.softeem.service.ICustomerInfoService;
 import com.softeem.utils.VOResult;
 

@@ -2,8 +2,6 @@ package com.softeem.servlet;
 
 import java.io.IOException;
 
-import javax.annotation.Resource;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.softeem.bean.CustomerInfoBean;
 import com.softeem.bean.UserInfoBean;
 import com.softeem.dao.ILoginDao;
-import com.softeem.dao.impl.LoginDaoImpl;
 
 /**
  * Servlet implementation class AppLoginServlet
@@ -40,9 +38,10 @@ public class AppLoginServlet extends AutowiredHttpServlet {
 		String pwd = request.getParameter("userPwd");
 		
 		// 查询数据库
-		UserInfoBean user = service.queryUserInfo(username);
+		// UserInfoBean user = service.queryUserInfo(username);
+		CustomerInfoBean cInfo = service.queryCustomInfo(username);
 		
-		if(pwd.equals(user.getUserPwd())){
+		if(pwd.equals(cInfo.getCusPwd())){
 			// 跳转菜单页面
 			System.out.println("跳转");
 			// response.getWriter().write("0");

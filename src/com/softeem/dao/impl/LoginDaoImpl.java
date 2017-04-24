@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+import com.softeem.bean.CustomerInfoBean;
 import com.softeem.bean.UserInfoBean;
 import com.softeem.dao.ILoginDao;
 import com.softeem.utils.DataSoureUtils;
@@ -54,6 +55,38 @@ public class LoginDaoImpl implements ILoginDao{
 		}
 		
 		return userInfo;
+	}
+
+	@Override
+	public CustomerInfoBean queryCustomInfo(String uname) {
+		String queryUserInfo = "select t.uname,t.upwd from t_customerinfo t where t.uname = ?";
+		Connection connection = dataSoureUtils.getConnection();
+		PreparedStatement userPs = null;
+		ResultSet userInfoResult = null;
+		CustomerInfoBean cInfo = new CustomerInfoBean();
+		
+		try {
+			// 查询
+			userPs = connection.prepareStatement(queryUserInfo);
+			userPs.setString(1, uname);
+			userInfoResult = userPs.executeQuery();
+			
+			while(userInfoResult.next()){
+				
+				cInfo.setCusName(userInfoResult.getString("uname"));
+				cInfo.setCusPwd(userInfoResult.getString("upwd"));
+			}
+			
+		} catch (SQLException e) {
+			logger.error(e.getMessage());
+			e.printStackTrace();
+		}finally {
+			dataSoureUtils.close(userInfoResult);
+			dataSoureUtils.close(userPs);
+			dataSoureUtils.close(connection);
+		}
+		
+		return cInfo;
 	}
 
 	

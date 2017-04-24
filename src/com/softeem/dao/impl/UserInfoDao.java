@@ -3,19 +3,13 @@ package com.softeem.dao.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.stereotype.Repository;
 
 import com.softeem.bean.UserInfoBean;
@@ -23,7 +17,6 @@ import com.softeem.dao.IUserInfoDao;
 import com.softeem.utils.DataSoureUtils;
 import com.softeem.utils.DateTimeUtil;
 import com.softeem.utils.IDGenerator;
-import com.softeem.utils.VOResult;
 
 @Repository("userInfoDao")
 public class UserInfoDao  implements IUserInfoDao {

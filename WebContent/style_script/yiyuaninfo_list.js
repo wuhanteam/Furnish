@@ -106,8 +106,8 @@ $("#chakan").click(function(){
 
 //
 $(".close-btn").click(function(){
-	$(this).parents("."updateYyinfo"").css("display","none");
-})
+	$(this).parents(".updateYyinfo").css("display","none");
+});
 
  // 新增
 $("#queren3").click(function(){
@@ -189,12 +189,12 @@ $("#queren3").click(function(){
 	}); 
 	
 	
-})
+});
 
 //弹出层
 $("#xinzeng").click(function(){
 	$(this).parents().siblings("#addGoodsInfo").toggle();
-})
+});
 
 //弹出层
 $(".updategoods").click(function(){
@@ -239,7 +239,7 @@ $(".updategoods").click(function(){
 	    }     
 	}); 
 	
-})
+});
 
 $("#queren4").click(function(){
 	// 隐藏确认按钮，避免重复提交
@@ -309,7 +309,7 @@ $("#queren4").click(function(){
 	       alert("修改失败！");    
 	    }     
 	}); 
-})
+});
 
     //产品列表，删除按钮提示
     //$(".del_pro").live("click",function(){
@@ -430,10 +430,10 @@ $("#updatequeren3").click(function(){
 		alert("抢购时间不能为空");
 		return
 	}
-	if(!sysj.length>0){
-		alert("抢购剩余时间不能为空");
-		return
-	}
+//	if(!sysj.length>0){
+//		alert("抢购剩余时间不能为空");
+//		return
+//	}
 	if(!digitalPattern.test(Jqr)){
 		alert("机器人数只能为数字");
 		return;

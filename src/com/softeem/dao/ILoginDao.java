@@ -1,5 +1,6 @@
 package com.softeem.dao;
 
+import com.softeem.bean.CustomerInfoBean;
 import com.softeem.bean.UserInfoBean;
 
 public interface ILoginDao {
@@ -10,4 +11,11 @@ public interface ILoginDao {
 	 * @return
 	 */
 	public UserInfoBean queryUserInfo(String userName);
+	
+	/**
+	 * 根据名称查询客户信息
+	 * @param uname
+	 * @return
+	 */
+	public CustomerInfoBean queryCustomInfo(String uname);
 }

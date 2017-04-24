@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +15,6 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import com.softeem.service.IAppContentInfoQueryService;
-import com.softeem.service.impl.AppContentInfoQueryService;
 
 /**
  * Servlet implementation class QueryAppIndexServlet
@@ -50,12 +48,12 @@ public class QueryAppIndexServlet extends AutowiredHttpServlet {
 		List<Map<String,String>> list3 = service.queryLatestYiyuanInfo();
 		
 		JSONObject obj = new JSONObject();
-		obj.put("pagetop", JSONArray.fromObject(list1));
+		obj.put("pagetop", JSONArray.fromObject(list1).toString());
 		obj.put("recommcolumn", JSONArray.fromObject(list2));
 		obj.put("latestyiyuanInfo", JSONArray.fromObject(list3));
 		System.out.println(obj.toString());
 		response.setHeader("Access-Control-Allow-Origin", "*");
-		response.getWriter().write(0);
+		response.getWriter().write(obj.toString());
 		//JSONArray array = new JSONArray();
 		
 		
